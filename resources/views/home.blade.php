@@ -8,7 +8,34 @@
 </head>
 <body>
     <div>
-        <h1>Hola</h1>
+        <h1>Movie List:</h1>
+
+        <ul>
+            @foreach ($movies as $movie)
+                <li>
+                    <h3>
+                        {{ $movie->title }}
+                    </h3>
+                    <ul>
+                        <li>
+                            {{ $movie->original_title }}
+                        </li>
+
+                        <li>
+                            {{ $movie->nationality }}
+                        </li>
+
+                        <li>
+                            {{ $movie->date }}
+                        </li>
+
+                        <li>
+                            {{ $movie->vote }}
+                        </li>
+                    </ul>
+                </li>
+            @endforeach
+        </ul>
     </div>
 </body>
 </html>
